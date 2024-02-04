@@ -69,7 +69,7 @@ export default function SignInScreen() {
             <TextInput
               value={email}
               onChangeText={value => setEmail(value)}
-              className="p-4 bg-white rounded-full mb-3"
+              className="p-4 bg-white rounded-full mb-3 text-black"
             />
             <Text className={`text-black text-lg font-bold`}>
               Password
@@ -78,7 +78,7 @@ export default function SignInScreen() {
               value={password}
               secureTextEntry
               onChangeText={value => setPassword(value)}
-              className="p-4 bg-white rounded-full mb-3"
+              className="p-4 bg-white rounded-full mb-3 text-black"
             />
           </View>
         </View>

@@ -67,7 +67,7 @@ export default function AddTripScreen(props) {
             <TextInput
               value={title}
               onChangeText={value => setTitle(value)}
-              className="p-4 bg-white rounded-full mb-3"
+              className="p-4 bg-white rounded-full mb-3 text-black"
             />
             <Text className={`text-black text-lg font-bold`}>
               How Much?
@@ -75,7 +75,7 @@ export default function AddTripScreen(props) {
             <TextInput
               value={amount}
               onChangeText={value => setAmount(value)}
-              className="p-4 bg-white rounded-full mb-3"
+              className="p-4 bg-white rounded-full mb-3 text-black"
             />
           </View>
           <View className="mx-2 space-x-2">

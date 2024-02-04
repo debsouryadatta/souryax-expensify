@@ -1,3 +1,7 @@
+# Souryax-Expensify-React-Native-App
+
+![Image](https://cdn.dribbble.com/userupload/5642332/file/original-8ea1b6243550cf8f8eae0248dff4c9f9.png?compress=1&resize=2048x1536)
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
@@ -128,6 +132,15 @@ To learn more about React Native, take a look at the following resources:
 39. Modifying the handleAddExpense func in the AddExpenseScreen to add the expenses in the firebase
 40. Fetching the expenses from the firebase using firebase query parameter, using useIsFocused hook to call the fetchExpenses func whenever the TripExpensesScreen is focused
 41. Faced some issues with the text color -> colors.heading, so instead using text-black wherever colors.heading was used
+
+-> Keeping Firebase Login Persistent
+42. npm install @react-native-async-storage/async-storage
+43. Modifying firebase config to have persistent login,
+export const auth = initializeAuth(app, {
+  persistence: getReactNativePersistence(AsyncStorage),
+});
+44. Following this video -> https://www.youtube.com/watch?v=2yHI0e4MzUE , to build the apk file for the android, ./gradlew clean, ./gradlew assembleRelease
+
 
 
 
