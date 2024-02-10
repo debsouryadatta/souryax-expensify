@@ -9,6 +9,7 @@ export default function BackButton() {
   return (
     <TouchableOpacity onPress={()=> navigation.goBack()} className="bg-white rounded-full h-8 w-8">
       <ChevronLeftIcon size="30" color={colors.button} />
+      <Text></Text>
     </TouchableOpacity>
   )
 }

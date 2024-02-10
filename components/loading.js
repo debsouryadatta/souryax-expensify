@@ -6,6 +6,7 @@ export default function Loading() {
   return (
     <View className="flex-row justify-center py-8">
       <ActivityIndicator size="large" color={colors.button} />
+      <Text></Text>
     </View>
   )
 }

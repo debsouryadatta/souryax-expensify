@@ -142,6 +142,20 @@ export const auth = initializeAuth(app, {
 44. Following this video -> https://www.youtube.com/watch?v=2yHI0e4MzUE , to build the apk file for the android, ./gradlew clean, ./gradlew assembleRelease
 
 
+<!-- Expensify Modification -->
+45. Creating the DayHomeScreen.js, TripHomeScreen.js, and adding in the appNavigation.js, Switching the HomeScreen content to TripHomeScreen,
+46. Designing the HomeScreen
+47. Designing the DayHomeScreen according to the design in the figma
+48. npm install react-native-month-year-picker --save -> For date picker, using it in the DayHomeScreen
+49. Creating the MonthPickerComp component for the month picker, using it in the DayHomeScreen
+50. Displaying the Flatlist in the DayHomeScreen, same as the Flatlist in the TripHomeScreen
+51. Modifying the handleClick function in the DayHomeScreen(Adding the day in the firebase)
+52. Navigating to the DayExpensesScreen and using the route params.
+53. In DayExpensesScreen, Fetching expenses where('dayId', '==', params.id) and also sending the params.id in the AddExpenseScreen for adding the expenses
+54. Creating a new deleteExpense function in the expensecard component, to delete the expenses from the DayExpensesScreen or the TripExpensesScreen
+
+<!-- Shifting the folders -->
+55. After the shifting the files and folders to the new directory, the ui of the app was broken, it may be due to nativewind or something else, it was fixed by adding empty <Text></Text> tag in all the screens & components.
 
 
 

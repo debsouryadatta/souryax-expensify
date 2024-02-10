@@ -1,4 +1,4 @@
-package com.newapp
+package com.expensify
 
 import android.app.Application
 import com.facebook.react.PackageList

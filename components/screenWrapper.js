@@ -10,6 +10,7 @@ export default function ScreenWrapper({children}) {
       style={{paddingTop: statusBarHeight}}
       showsVerticalScrollIndicator={false}>
       {children}
+      <Text></Text>
     </ScrollView>
   );
 }

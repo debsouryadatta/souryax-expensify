@@ -12,6 +12,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { onAuthStateChanged } from 'firebase/auth';
 import { setUser } from '../redux/slices/user';
 import { auth } from '../config/firebase';
+import DayHomeScreen from '../screens/DayHomeScreen';
+import TripHomeScreen from '../screens/TripHomeScreen';
+import DayExpensesScreen from '../screens/DayExpensesScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -42,9 +45,12 @@ export default function AppNavigation() {
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Home">
           <Stack.Screen options={{headerShown: false}} name="Home" component={HomeScreen} />
+          <Stack.Screen options={{headerShown: false}} name="DayHome" component={DayHomeScreen} />
+          <Stack.Screen options={{headerShown: false}} name="TripHome" component={TripHomeScreen} />
           <Stack.Screen options={{headerShown: false}} name="AddTrip" component={AddTripScreen} />
           <Stack.Screen options={{headerShown: false}} name="AddExpense" component={AddExpenseScreen} />
           <Stack.Screen options={{headerShown: false}} name="TripExpenses" component={TripExpensesScreen} />
+          <Stack.Screen options={{headerShown: false}} name="DayExpenses" component={DayExpensesScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     );

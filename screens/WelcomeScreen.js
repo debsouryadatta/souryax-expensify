@@ -42,6 +42,7 @@ export default function WelcomScreen() {
               Sign Up
             </Text>
           </TouchableOpacity>
+          <Text></Text>
         </View>
       </View>
     </ScreenWrapper>

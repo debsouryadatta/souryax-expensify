@@ -98,6 +98,7 @@ export default function SignInScreen() {
           )}
         </View>
       </View>
+      <Text></Text>
     </ScreenWrapper>
   );
 }

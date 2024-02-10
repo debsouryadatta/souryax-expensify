@@ -11,7 +11,8 @@ import {expensesRef} from '../config/firebase';
 import Loading from '../components/loading';
 
 export default function AddTripScreen(props) {
-  let {id} = props.route.params;
+  // let {id} = props.route.params;
+  const params = props.route.params;
   const [title, setTitle] = useState('');
   const [amount, setAmount] = useState('');
   const [category, setCategory] = useState('');
@@ -24,14 +25,25 @@ export default function AddTripScreen(props) {
       // good to go
       // navigation.goBack();
       setLoading(true);
-      let doc = await addDoc(expensesRef, {
-        title,
-        amount,
-        category,
-        tripId: id,
-      });
-      setLoading(false);
+      if(params.dayId){
+        let doc = await addDoc(expensesRef, {
+          title,
+          amount,
+          category,
+          dayId: params.dayId,
+        });
       if (doc && doc.id) navigation.goBack();
+      setLoading(false);
+      } else {
+        let doc = await addDoc(expensesRef, {
+          title,
+          amount,
+          category,
+          tripId: params.tripId,
+        });
+      if (doc && doc.id) navigation.goBack();
+      setLoading(false);
+      }
     } else {
       // show error
       Snackbar.show({
@@ -112,6 +124,7 @@ export default function AddTripScreen(props) {
           )}
         </View>
       </View>
+      <Text></Text>
     </ScreenWrapper>
   );
 }

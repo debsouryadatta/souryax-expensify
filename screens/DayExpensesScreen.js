@@ -9,6 +9,7 @@ import BackButton from '../components/BackButton';
 import ExpenseCard from '../components/expenseCard';
 import {getDocs, query, where} from 'firebase/firestore';
 import {expensesRef} from '../config/firebase';
+import { month } from '../constants';
 const items = [
   {
     id: 1,
@@ -30,14 +31,15 @@ const items = [
   },
 ];
 
-export default function TripExpensesScreen(props) {
-  const {id, place, country} = props.route.params;
+export default function DayExpensesScreen(props) {
+  const params = props.route.params;
+  console.log(params);
   const navigation = useNavigation();
   const isFocused = useIsFocused();
   const [expenses, setExpenses] = useState([]);
 
   const fetchExpenses = async () => {
-    const q = query(expensesRef, where('tripId', '==', id));
+    const q = query(expensesRef, where('dayId', '==', params.id));
     const querySnapshot = await getDocs(q);
     let data = [];
     querySnapshot.forEach(doc => {
@@ -60,10 +62,10 @@ export default function TripExpensesScreen(props) {
           </View>
           <View>
             <Text className={`text-black text-xl font-bold text-center`}>
-              {place}
+              Day {params.day}
             </Text>
             <Text className={`text-black text-xs text-center`}>
-              {country}
+              {month[params.month-1]}
             </Text>
           </View>
         </View>
@@ -80,7 +82,7 @@ export default function TripExpensesScreen(props) {
             </Text>
             <TouchableOpacity
               onPress={() =>
-                navigation.navigate('AddExpense', {tripId: id})
+                navigation.navigate('AddExpense', {dayId: params.id})
               }
               className="p-2 px-3 bg-white border border-gray-200 rounded-full">
               <Text className="text-black">Add Expense</Text>

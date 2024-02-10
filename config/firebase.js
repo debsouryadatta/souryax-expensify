@@ -25,6 +25,7 @@ export const auth = initializeAuth(app, {
 });
 
 export const tripsRef = collection(db, "trips");
+export const daysRef = collection(db, "days");
 export const expensesRef = collection(db, "expenses");
 
 export default app;

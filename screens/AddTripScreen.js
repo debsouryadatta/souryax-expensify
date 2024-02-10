@@ -80,6 +80,7 @@ export default function AddTripScreen() {
             />
           </View>
         </View>
+        <Text></Text>
 
         <View>
           {loading ? (
