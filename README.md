@@ -156,6 +156,7 @@ export const auth = initializeAuth(app, {
 
 <!-- Shifting the folders -->
 55. After the shifting the files and folders to the new directory, the ui of the app was broken, it may be due to nativewind or something else, it was fixed by adding empty <Text></Text> tag in all the screens & components.
+56. Building the apk file for the android, again following the same video -> https://www.youtube.com/watch?v=2yHI0e4MzUE
 
 
 
