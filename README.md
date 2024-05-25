@@ -113,14 +113,16 @@ To learn more about React Native, take a look at the following resources:
 24. Designing the SignInScreen - Same as the AddTripScreen styles, secureTextEntry property in the TextInput component for password
 25. Designing the SignUpScreen - Fully same as the SignInScreen
 
-<!-- Video 07 -->
+<br/>
+Video 07
 26. Using Redux Toolkit -> npm install @reduxjs/toolkit, npm install react-redux, creating the store.js, creating the slice for user -> Taking code syntax from official docs, giving the slice in the store
 27. Wrapping the App with the Provider, giving store as props
 28. Using useSelector in the appNavigation to get the user state, setting the Stack navigations according to the user state
 29. Setting up firebase console in the firebase website, npm install firebase
 30. Exporting db, auth, tripsRef, expensesRef from the firebase.js
 
-<!-- Video 08 -->
+<br/>
+Video 08
 31. npm i react-native-snackbar -> To show the error messages, using it in the SignUpScreen
 32. createuserWithEmailAndPassword func -> Creating the user in the firebase, using it in the SignUpScreen, onAuthStateChanged func -> Checking if the user is already logged in or not, using it in the AppNavigation, dispatching the setUser action in the onAuthStateChanged func
 33. signInWithEmailAndPassword func -> Signing in the user in the firebase, using it in the SignInScreen
@@ -141,8 +143,8 @@ export const auth = initializeAuth(app, {
 });
 44. Following this video -> https://www.youtube.com/watch?v=2yHI0e4MzUE , to build the apk file for the android, ./gradlew clean, ./gradlew assembleRelease
 
-
-<!-- Expensify Modification -->
+<br/>
+Expensify Modification
 45. Creating the DayHomeScreen.js, TripHomeScreen.js, and adding in the appNavigation.js, Switching the HomeScreen content to TripHomeScreen,
 46. Designing the HomeScreen
 47. Designing the DayHomeScreen according to the design in the figma
@@ -154,7 +156,8 @@ export const auth = initializeAuth(app, {
 53. In DayExpensesScreen, Fetching expenses where('dayId', '==', params.id) and also sending the params.id in the AddExpenseScreen for adding the expenses
 54. Creating a new deleteExpense function in the expensecard component, to delete the expenses from the DayExpensesScreen or the TripExpensesScreen
 
-<!-- Shifting the folders -->
+<br/>
+Shifting the folders
 55. After the shifting the files and folders to the new directory, the ui of the app was broken, it may be due to nativewind or something else, it was fixed by adding empty <Text></Text> tag in all the screens & components.
 56. Building the apk file for the android, again following the same video -> https://www.youtube.com/watch?v=2yHI0e4MzUE
 
